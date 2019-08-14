@@ -149,6 +149,8 @@ header {
 
   @media(max-width: @mobileBreakpoint) {
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
   }
 }
 
@@ -179,12 +181,45 @@ header {
 }
 
 .introduction {
-	width: 40%;
+	width: 44%;
+
+	h2 {
+		font-size: 1.7rem;
+		padding: 20px 0;
+	}
+
+	p {
+		line-height: 1.5rem;
+	}
 }
 
 .work-experience {
   display: flex;
+  justify-content: space-evenly;
   margin: 40px;
 }
 
+footer {
+	background-color: lightcoral; 
+	height: auto;
+	text-align: center;
+	
+
+	nav {
+		padding: 1.7rem 0;
+	}
+
+	nav a {
+		text-decoration: none;
+		padding: .5rem 1rem;
+		color: white;
+		text-align: center;
+
+		@media(max-width: @mobileBreakpoint) {
+			display: flex;
+			flex-direction: column;
+		  }
+	}
+	
+}
 
