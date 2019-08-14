@@ -68,8 +68,9 @@ html, body {
 // mixins
 .my-flex-defaults() {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 :root {
@@ -96,6 +97,11 @@ header {
 	height: 15rem;
 	margin: 30px 0;
 
+	@media(max-width: @mobileBreakpoint) {
+		height: 17rem;
+		.my-flex-defaults();
+	  }
+
 }
 
 .profile-img {
@@ -106,6 +112,10 @@ header {
 		width: 100%;
 		border-radius: 50%;
 		border: 3px dotted white;
+		@media(max-width: @mobileBreakpoint) {
+			margin-top: 90px;
+			margin-bottom: 10px;
+		  }
 	}
 }
 
@@ -116,6 +126,12 @@ header {
 	justify-content: space-evenly;
 	height: 15rem;
 	width: 45%;
+	position: sticky;
+
+	@media(max-width: @mobileBreakpoint) {
+		width: 100%;
+		margin-bottom: 120px;
+	  }
 	
 	h1 {
 		font-family: bangers;
@@ -123,7 +139,9 @@ header {
 		padding-bottom: 10px;
 		color: black;
 
-		
+		@media(max-width: @mobileBreakpoint) {
+			text-align: center;
+		  }
 
 	}
 
@@ -132,7 +150,8 @@ header {
 		color: grey;
 
 		@media(max-width: @mobileBreakpoint) {
-			display: none;
+			margin-bottom: 20px;
+			text-align: center;
 		  }
 	}
 
@@ -144,10 +163,7 @@ header {
 		color: white;
 
 		@media(max-width: @mobileBreakpoint) {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
+			.my-flex-defaults()
 		  }
 	}
 
@@ -158,9 +174,7 @@ header {
   justify-content: space-between;
 
   @media(max-width: @mobileBreakpoint) {
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	.my-flex-defaults()
   }
 }
 
@@ -201,6 +215,16 @@ header {
 	p {
 		line-height: 1.5rem;
 	}
+
+	@media(max-width: @mobileBreakpoint) {
+		text-align: center;
+	  }
+}
+
+.work-experience-heading {
+	text-align: center;
+	font-size: 2rem;
+	margin-top: 40px;
 }
 
 .work-experience {
@@ -209,9 +233,7 @@ header {
   margin: 40px;
 
   @media(max-width: @mobileBreakpoint) {
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	.my-flex-defaults()
   }
   
 }
@@ -263,8 +285,7 @@ footer {
 		text-align: center;
 
 		@media(max-width: @mobileBreakpoint) {
-			display: flex;
-			flex-direction: column;
+			.my-flex-defaults()
 		  }
 	}
 	
