@@ -1,1 +1,349 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+:root {
+  font-size: 100%;
+}
+@media (max-width: 500px) {
+  :root {
+    font-size: 150%;
+  }
+}
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: pink;
+  border-radius: 0.5rem;
+  height: 15rem;
+  margin: 30px 0;
+}
+@media (max-width: 500px) {
+  header {
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.profile-img {
+  width: 40%;
+  height: auto;
+}
+.profile-img img {
+  width: 100%;
+  border-radius: 50%;
+  border: 3px dotted white;
+}
+@media (max-width: 500px) {
+  .profile-img img {
+    margin-top: 90px;
+    margin-bottom: 10px;
+  }
+}
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  justify-content: space-evenly;
+  height: 15rem;
+  width: 45%;
+  position: sticky;
+}
+@media (max-width: 500px) {
+  .navigation {
+    width: 100%;
+    margin-bottom: 120px;
+  }
+}
+.navigation h1 {
+  font-family: bangers;
+  font-size: 2rem;
+  padding-bottom: 10px;
+  color: black;
+}
+@media (max-width: 500px) {
+  .navigation h1 {
+    text-align: center;
+  }
+}
+.navigation h2 {
+  font-size: 1.5rem;
+  color: grey;
+}
+@media (max-width: 500px) {
+  .navigation h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+.navigation nav a {
+  text-decoration: none;
+  background-color: lightcoral;
+  padding: 0.5rem 1rem;
+  margin: 0.1rem;
+  color: white;
+}
+@media (max-width: 500px) {
+  .navigation nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  border-radius: 0.5rem;
+  width: 40%;
+}
+.skills h2 {
+  font-size: 1.7rem;
+  padding: 20px 0;
+}
+.skills ul {
+  width: 100%;
+}
+.skills li {
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid white;
+}
+.introduction {
+  width: 44%;
+}
+.introduction h2 {
+  font-size: 1.7rem;
+  padding: 20px 0;
+}
+.introduction p {
+  line-height: 1.5rem;
+}
+@media (max-width: 500px) {
+  .introduction {
+    text-align: center;
+  }
+}
+.work-experience-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 40px;
+}
+.work-experience {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px;
+}
+@media (max-width: 500px) {
+  .work-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+  width: 20%;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .work {
+    width: 100%;
+    margin: 10px;
+  }
+}
+.work h3 {
+  padding-bottom: 10px;
+  border-bottom: 2px dotted white;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.work p {
+  line-height: 1.3rem;
+  padding-top: 10px;
+}
+footer {
+  background-color: lightcoral;
+  height: auto;
+  text-align: center;
+}
+footer nav {
+  padding: 1.7rem 0;
+}
+footer nav a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  footer nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
